@@ -25,17 +25,30 @@ class City(models.Model):
     def __str__(self):
         return self.name
 
+CATEGORY_CHOICES = (
+    ("food", "Food"),
+    ("bar", "Bar"),
+    ("arts", "Arts"),
+    ("nightlife", "Nightlife"),
+    ("culture", "Culture"),
+    ("sights", "Sights"),
+    ("cafes", "Cafes"),
+    ("shops", "Shops"),
+    ("outdoors", "Outdoors"),
+)
+
 class Guide(models.Model):
     title = models.CharField(max_length=150)
     city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="cities")
-    #TODO: remove country, its linked in city as is
     country = models.CharField(max_length=100)
     neighborhood = models.CharField(max_length=100)
-    description = models.TextField(max_length=250)
-    #TODO: category should be its own model? so that we can make them choices
-    #we can choose them instead of letting the user go crazy with it
-    category = models.CharField(max_length=50)
-    image = models.CharField(max_length=200, default="http")
+    description = models.TextField(max_length=600)
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='none')
+    image = models.CharField(max_length=200, null=True)
+    image2 = models.CharField(max_length=200, null=True, blank=True)
+    image3 = models.CharField(max_length=200, null=True, blank=True)
+    image4 = models.CharField(max_length=200, null=True, blank=True)
+    image5 = models.CharField(max_length=200, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="users")
 

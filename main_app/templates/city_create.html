@@ -1,16 +1,16 @@
 {% extends 'navbar.html' %} 
   
 {% block content %}
-
+<body class="profile-body">
 <div class="create-body container-fluid">
 
    
     <div class="form-group">
-        <label>Add City</label>
+        <label id="form-label">Add City</label>
             <form method="post">
                 {% csrf_token %} 
                 {{form.as_p}} 
-            <input class="update_form_input" type="submit" value="Submit" />
+            <input action="" class="update_form_input" type="submit" value="Submit" />
             
     </div>
 

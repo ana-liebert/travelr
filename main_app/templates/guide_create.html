@@ -1,12 +1,13 @@
 {% extends 'navbar.html' %} 
   
 {% block content %}
+<body class="profile-body">
 
 <div class="create-body container-fluid">
 
 
         <div class="form-group">
-            <label class="form-label">Add Guide</label>
+            <label id="form-label">Add Guide</label>
             <form action="" method="post">
                 {% csrf_token %} {{form.as_p}} <input class="update_form_input" type="submit" value="Submit" />
             </form>

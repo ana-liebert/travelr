@@ -22,7 +22,7 @@ class UserProfileForm(forms.ModelForm):
 class GuideCreateForm(forms.ModelForm):
     class Meta:
         model = Guide
-        fields = ('title', 'city', 'country', 'neighborhood', 'description', 'category', 'image')
+        fields = ('title', 'city', 'country', 'neighborhood', 'description', 'category', 'image', 'image2', 'image3', 'image4', 'image5' )
 
     widgets = {
         'title': forms.TextInput(attrs={'class': 'form-control'}),
@@ -32,13 +32,21 @@ class GuideCreateForm(forms.ModelForm):
         'description': forms.Textarea(attrs={'class': 'form-control'}),
         'category': forms.TextInput(attrs={'class': 'form-control'}),
         'image': forms.TextInput(attrs={'class': 'form-control'}),
+        'image2': forms.TextInput(attrs={'class': 'form-control'}),
+        'image3': forms.TextInput(attrs={'class': 'form-control'}),
+        'image4': forms.TextInput(attrs={'class': 'form-control'}),
+        'image5': forms.TextInput(attrs={'class': 'form-control'}),
     }
     
 
 class UpdateGuideForm(forms.ModelForm):
     class Meta:
         model = Guide
-        fields = ('title', 'country', 'neighborhood', 'description', 'category', 'image')
+        fields = ('title', 'country', 'neighborhood', 'description', 'category', 'image',
+        'image2',
+        'image3',
+        'image4',
+        'image5')
 
     widgets = {
         'title': forms.TextInput(attrs={'class': 'form-control'}),
@@ -47,6 +55,10 @@ class UpdateGuideForm(forms.ModelForm):
         'description': forms.TextInput(attrs={'class': 'form-control'}),
         'category': forms.TextInput(attrs={'class': 'form-control'}),
         'image': forms.TextInput(attrs={'class': 'form-control'}),
+        'image2': forms.TextInput(attrs={'class': 'form-control'}),
+        'image3': forms.TextInput(attrs={'class': 'form-control'}),
+        'image4': forms.TextInput(attrs={'class': 'form-control'}),
+        'image5': forms.TextInput(attrs={'class': 'form-control'}),
     }
 
 class CityCreateForm(forms.ModelForm):

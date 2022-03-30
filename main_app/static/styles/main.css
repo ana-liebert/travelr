@@ -1,14 +1,21 @@
+#icon {
+    max-width: 80px;
+    max-height: 60px;
+}
+
 #navbar {
     background-color: #4b50fa !important;
-    color: white !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 150px !important;
+}
+
+.navbar-brand {
     font-family: 'Bowlby One', cursive;
-    font-weight: lighter !important;
 }
 
-.nav-text {
-    color: white;
+.nav-link, .navbar-brand {
+    color: white !important;
 }
-
 .my-row {
     height: 675px;
 }
@@ -27,14 +34,15 @@
     justify-content: center;
     align-items: center;
     font-family: 'Bowlby One', cursive;
-    color: black;
+    color: white;
     opacity: 100%;
-    font-size: 100px;
+    font-size: 110px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: visible;
+    z-index: 1;
 }
 
 .cover-image {
@@ -166,16 +174,52 @@ a:visited {
     align-items: stretch;
 }
 
+#form-group-delete {
+    font-size: 30px;
+    text-align:end;
+    padding: 30px;
+    margin: 60px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+
+#form-group-signup {
+    font-size: 20px;
+    padding: 100px;
+    padding-bottom: 200px;
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+}
+
+#form-label {
+    font-size: 40px;
+    font-family: 'Bowlby One', cursive !important;
+    margin-bottom: 20px;
+}
+
+#submit-button {
+    font-size: 20px;
+    font-family: 'Bowlby One', cursive !important;
+    border: solid;
+    border-color: #4b50fa;
+    margin-top: 20px;
+    color: #4b50fa;
+}
+
+
 .update_form_input {
     text-align: end !important;
 }
 
-
+#city-body {
+    background-color: #ffb480;
+}
 .city-body {
     text-align: center;
     font-size: 40px;
-    /* background-color: #00f2a2; */
-    /* background-color: #2DDFFF; */
     background-color: #ffb480;
     text-align: center;
     display: flex;
@@ -193,7 +237,7 @@ a:visited {
 .city-header {
     padding-bottom: 45px;
     font-size: 65px;
-    line-height: 64px;
+    line-height: 70px;
 }
 
 
@@ -201,20 +245,13 @@ a:visited {
 #card:hover { transform: scale(1.1); }
 
 
-#city_img{
-    max-width: 700px;
-    max-height: 900px;
-}
 
 #card_style {
     margin: 5px;
-    /* background-color: #f5f474; */
-    /* background-color: #00f2a2; */
-    /* background-color: #2DDFFF; */
     background-color: #ffb480;
     border: solid;
-    /* border-color: #ef0041; */
     border-color: #4b50fa;
+    margin-bottom: 20px;
 }
 
 #newpost{
@@ -226,9 +263,6 @@ a:visited {
 .profile-body {
     text-align: center;
     font-size: 16px;
-    /* background-color: #f5f474; */
-    /* background-color: #00f2a2; */
-    /* background-color: #2DDFFF; */
     background-color: #ffb480;
     text-align: center;
     display: flex;
@@ -236,16 +270,12 @@ a:visited {
     align-items: center;
     font-family: 'Bowlby One', cursive;
     margin: 20px;
-    /* color: #ef0041; */
     color: #4b50fa;
 }
 
 .create-body{
     text-align: center;
     font-size: 16px;
-    /* background-color: #f5f474; */
-    /* background-color: #00f2a2; */
-    /* background-color: #2DDFFF; */
     background-color: #ffb480;
     text-align: center;
     display: flex;
@@ -253,7 +283,18 @@ a:visited {
     align-items: center;
     font-family: 'Bowlby One', cursive;
     margin: 20px;
-    /* color: #ef0041; */
     color: #4b50fa;
-    padding-bottom: 200px;
+    /* padding-bottom: 300px; */
 }
+
+#city_img {
+        /* position: sticky;
+     
+        left: 0; */
+        
+        max-width: 600px;
+        max-height: 800px;
+        /* overflow-y:scroll;
+        overflow-x:hidden; */
+}
+

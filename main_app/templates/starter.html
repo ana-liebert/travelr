@@ -1,28 +1,32 @@
-
-
 {% extends 'navbar.html' %} {% block content %}
-    
-        <div class="hero cover ">
-            <div>
-                <h1 class="headline">Explore</h1>
-            </div>
-            <img class="cover-image hero" src="https://eskipaper.com/images/rio-de-janeiro-wallpaper-1.jpg">
-        </div>
-        
-    <div class="container-fluid my-container">
-        <div class="row my-row">
-          {% for city in cities %}
-          <div class="col-xl-2 col-md-4 col-sm-6 my-col" id="id1">
-            <a style="text-decoration:none;" class="home_anchor" href="{% url 'city_detail' city.pk %}">{{city.name}}</a>
-          </div>
-          {% endfor %}
-        </div>
-        <!-- the number of columns is 12, so when you assign a col number , i.e col-4 that means that column should take the width of four columns of the 12 -->
-        <!-- xs / sm / md / large / extra large are for what the size should be depending on the screen , i.e set a size for md screens as well as a xmall to change the mobile behavior -->
-        <!-- if you want to change the position, (center, whatev) you can use flexbox terminology in the class name -->
-        <!-- row justify-content-center (or start, end, etc) justify-content-between would push all the space in between and have elemtns pushed to the outer sides of the div left/right -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-</html>
-{% endblock %}
+
+<div class="hero cover ">
+    <div class="container">
+        <h1 class="headline">Explore</h1>
+    </div>
+    <img class="cover-image hero" src="https://eskipaper.com/images/rio-de-janeiro-wallpaper-1.jpg">
+</div>
+
+<div class="container-fluid my-container">
+    <div class="row my-row">
+        {% for city in cities %}
+        {% if forloop.counter <= 12 %}
+        <div class="col-xl-2 col-md-4 col-sm-6 my-col" id="id1">
+            <a style="text-decoration:none;" class="home_anchor"
+                href="{% url 'city_detail' city.pk %}">{{city.name}}</a>
+
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    </body>
+
+    
+    </html>
+    {% endblock %}

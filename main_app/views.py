@@ -18,8 +18,15 @@ class StarterView(TemplateView):
     template_name = 'starter.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["cities"] = City.objects.all()
+        city=self.request.GET.get("city")
+        if city != None: 
+            context["cities"] = City.objects.filter(name__icontains=city)
+        else: 
+            context["cities"] = City.objects.all()
+        
         return context
+    
+
 
 class About(TemplateView):
     template_name = "about.html"
@@ -64,7 +71,7 @@ class CityCreate(CreateView):
     
     #TODO: Change this to bring you to the city detail view when its done
     def get_success_url(self):
-        return reverse('starter')
+        return reverse('city_detail', kwargs={'pk': self.object.pk})
 
 @method_decorator(login_required, name='dispatch')
 class ProfileUpdate(UpdateView):
@@ -143,3 +150,4 @@ class CityUpdate(UpdateView):
     template_name = "city_update.html"
     def get_success_url(self):
         return reverse('city_detail', kwargs={'pk': self.object.pk})
+
