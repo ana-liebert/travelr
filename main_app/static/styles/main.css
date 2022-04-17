@@ -236,8 +236,8 @@ a:visited {
 }
 
 
-#view-post{ transition: all .2s ease-in-out; }
-#view-post:hover { transform: scale(1.1); }
+.view-post{ transition: all .2s ease-in-out; }
+.view-post:hover { transform: scale(1.1); }
 
 
 
