@@ -20,8 +20,6 @@
 .profile-body, .guide_detail_body {
     text-align: center;
     font-size: 40px;
-    /* background-color: #f5f474; */
-    /* background-color: #00f2a2; */
     background-color: #ffb480;
     text-align: center;
     display: flex;
@@ -76,7 +74,6 @@
 
 .profile_col {
     border-style:solid;
-    /* border-color: #ef0041; */
     border-color: #4b50fa;
 }
 
@@ -105,8 +102,6 @@ margin-left: 90px;
     border: solid;
     margin: 5px;
     padding: 50px;
-    /* color: #ef0041; */
-    /* border-color: #ef0041; */
     color: #4b50fa;
     border-color: #4b50fa;
     text-align: center !important;
