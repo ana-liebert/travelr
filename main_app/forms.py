@@ -73,4 +73,3 @@ class CityCreateForm(forms.ModelForm):
         'grid_img': forms.TextInput(attrs={'class': 'form-control'}),
     }
 
-# class RegisterUserForm(UserCreationForm):

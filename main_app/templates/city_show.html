@@ -17,7 +17,7 @@
       </div>
       <div class="row" id="city-left">
         <div class="col-lg-6 overflow-hidden" >
-          <img id="city_img" src="{{city.image}}" alt="{{city.name}}" />
+          <img class="city_img" src="{{city.image}}" alt="{{city.name}}" />
           <div class="detail__name">
             <p><a id="newpost" href="{% url 'guide_create' %}">Add a new post</a>
             <a id="newpost" href="{% url 'city_delete' city.pk %}">Delete</a>
@@ -34,7 +34,7 @@
               <div class="card-body">
                 <h5 class="card-text">{{guides.category}}</h5>
                   <h3 class="card-title">{{guides.title}}</h3>
-                <a class="btn btn-primary" href="{% url 'guide_detail' guides.pk %}">View Post</a>
+                <a id="view-post" class="btn btn-primary" href="{% url 'guide_detail' guides.pk %}">View Post</a>
     
               </div>
               
